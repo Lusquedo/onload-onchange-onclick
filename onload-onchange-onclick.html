@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onload-onchange-onclick</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body onload="pagina()">
+    <h1>Aplicação das técnicas javascript eventos onload, onchange e onclick</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc cursus dolor dolor, at consectetur quam tincidunt in. Sed accumsan suscipit metus vitae lacinia. Nam id porttitor purus. In sit amet velit viverra, congue massa sit amet, fermentum lorem. Integer at elit ligula. Ut viverra enim in ipsum venenatis vestibulum. Aenean non porta velit. Integer a dignissim magna. Aenean tempor feugiat laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec malesuada risus id dui ullamcorper facilisis eget quis lectus. Sed ut dolor sed lorem interdum viverra vel ac turpis. Duis euismod facilisis mattis. Curabitur nec eros sit amet sapien ullamcorper egestas eget vestibulum sem. Praesent a porta nisl.</p>
+
+    <label for="nome">Digite qualquer coisa:</label>
+    <input type="text" id="nome" onchange="mostrarNome()">
+    <p id="mensagemNome"></p>
+
+    <button onclick="mostrarMensagem()">Clique Aqui</button>
+
+    <script>
+        
+        function pagina() {
+            alert("onload");
+        }
+
+        function mostrarNome() {
+            let nome = document.getElementById("nome").value;
+            document.getElementById("mensagemNome").innerText = "Você digitou: " + nome;
+        }
+
+        
+        function mostrarMensagem() {
+            alert("onclick");
+        }
+    </script>
+</body>
+</html>
